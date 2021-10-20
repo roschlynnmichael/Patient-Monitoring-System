@@ -13,3 +13,9 @@ This system enables monitoring of the blood pressure and the temperature of the 
 Website made using ReactJS as the Frontend and Firebase as the backend
 
 Firebase handles all the authentication mechanisms such as Forgot password, update password, login and signup of user and logout. 
+
+# Things yet to be implemented
+
+1. Page Beautification
+2. Fetching of data from firebase
+3. MAX30102 Oximeter Sensor
