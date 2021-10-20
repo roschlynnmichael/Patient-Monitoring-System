@@ -2,11 +2,17 @@
 Required Libraries:
 
 SoftwareSerial
+
 ESP8266 Community (V2.8.0)
+
 Dallas Temperature
+
 One Wire
+
 Wire
+
 I2C_LCD
+
 Firebase Arduino Master
 
 Install these libraries before you proceed
@@ -38,7 +44,10 @@ To deploy this project the following steps need to be followed.
 
 # Debug Phase
 No power to display: Recheck your connections. They can get loose overtime
+
 ESP8266 not responding: Try burning the AT Firmware onto the ESP module using an CH340 USB to Serial Adapter
+
 DS18B20 Thermal Probe heats up badly: Recheck your connections and see to it you use a resistor. If you did not use a resistor, you probably fried your thermal probe permanently.
+
 ESP8266 not sending data to Firebase: Update the fingeprint in your HTTPCLIENT.h to enable secure communication between the ESP module and Firebase. Put your firebase database host on the website https://www.grc.com/fingerprints.htm and click to fingeprint your firebase database host. Copy this fingerprint and input it into your HTTPCLIENT.h file in the arduino library. Even after this if it doesn't send data, be sure to check your connection as loose connections are 90% of the times causing errors.
 
