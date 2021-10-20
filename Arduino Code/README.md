@@ -1,27 +1,21 @@
 # Installing Libraries
 Required Libraries:
 
-SoftwareSerial
+1. SoftwareSerial
+2. ESP8266 Community (V2.8.0)
+3. Dallas Temperature
+4. One Wire
+5. Wire
+6. I2C_LCD
+7. Firebase Arduino Master
 
-ESP8266 Community (V2.8.0)
-
-Dallas Temperature
-
-One Wire
-
-Wire
-
-I2C_LCD
-
-Firebase Arduino Master
-
-Install these libraries before you proceed
+Install these libraries before you proceed. Follow google tutorials on how to install libraries successfully in Arduino.
 
 # Getting Started 
 
 1. Before you go to the Arduino side of things it is important to ensure that your ESP8266 Module is burnt with the code.
 2. Open the firebase code for esp8266 and change the database host, the authentication key, wifi ssid and password for your own firebase settings.
-3. Be sure to connect the reset pin of the arduino uno to ground and the gpio2 to ground to enter flashing mode. 
+3. Be sure to connect the reset pin of the arduino uno to ground and the GPIO0 to ground to enter flashing mode. 
 4. Connect RX and TX of Arduino to RX and TX of ESP8266 respectively
 5. Burn the code onto the ESP module
 6. Your ESP setup has been completed
@@ -51,3 +45,6 @@ DS18B20 Thermal Probe heats up badly: Recheck your connections and see to it you
 
 ESP8266 not sending data to Firebase: Update the fingeprint in your HTTPCLIENT.h to enable secure communication between the ESP module and Firebase. Put your firebase database host on the website https://www.grc.com/fingerprints.htm and click to fingeprint your firebase database host. Copy this fingerprint and input it into your HTTPCLIENT.h file in the arduino library. Even after this if it doesn't send data, be sure to check your connection as loose connections are 90% of the times causing errors.
 
+In 90% of the times, loose connections can occur which can cause the hardware to fail. It is always wise to recheck and tighten up connections before powering on the system.
+
+ESP8266 (Timeout: Waiting for Packet Header): Recheck your connections and also make sure whether you have grounded GPIO0 to ground or not. Power off your arduino recheck the connection and then connect it back. You would require a few tries at this stage to get the ESP8266 to enter flashing mode and successfully burnt.
