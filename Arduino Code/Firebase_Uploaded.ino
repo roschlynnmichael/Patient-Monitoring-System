@@ -2,10 +2,10 @@
 #include <FirebaseArduino.h>
 #include <Arduino.h>
 
-#define FIREBASE_HOST "iot-covid-patient-monitoring-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "mOCIV64cmr0wTfdjJmEfja3ZqhwNUa9tf887aw9J"
-#define WIFI_SSID "SDsouza"
-#define WIFI_PASSWORD "dsouza@8104045917"
+#define FIREBASE_HOST "Your Firebase Database Host"
+#define FIREBASE_AUTH "Your Firebase Authentication Key"
+#define WIFI_SSID "Your Wi-Fi SSID"
+#define WIFI_PASSWORD "Your Wi-Fi Password"
 
 String sensor_data;
 bool Sr;
