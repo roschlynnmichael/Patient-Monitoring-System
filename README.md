@@ -1,5 +1,7 @@
 # Patient-Monitoring-System
 
-To view the react app, please visit the branch React App
+Made using Arduino and ESP8266
 
-To view the Arduino code, please visit the branch Arduino Code
+Website Developed using Firebase as Backend and ReactJS as Frontend
+
+Will update all instructions in some days.
