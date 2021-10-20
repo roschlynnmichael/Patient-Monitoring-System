@@ -19,3 +19,4 @@ Firebase handles all the authentication mechanisms such as Forgot password, upda
 1. Page Beautification
 2. Fetching of data from firebase
 3. MAX30102 Oximeter Sensor
+4. Setting up alerts on webpage for vitals that are not in the normal range
