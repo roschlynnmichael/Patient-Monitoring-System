@@ -6,7 +6,7 @@ Department of Information Technology
 
 Group Number: 11
 
-Developed and Mainted by Roschlynn Michael D'souza and Francina Godwin Pali
+Developed and Maintained by Roschlynn Michael D'souza and Francina Godwin Pali
 
 This system enables monitoring of the blood pressure and the temperature of the patient. The Arduino UNO Rev3 enables the monitoring of these values and this data is then sent to Firebase Realtime Database using ESP8266-01 Wi-Fi Module. 
 
