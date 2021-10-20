@@ -2,6 +2,40 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Install Visual Studio Code from here https://code.visualstudio.com/
+
+Install NodeJS from here https://nodejs.org/en/
+
+# Create empty directory
+
+Before you begin. It is necessary to create an empty directory. On windows just create a new folder of your choice where you want to store it either desktop or any drive of your choice. Then right click in the empty directory and click open with Visual Studio Code. 
+
+Then click on new terminal to open a terminal in the current working directory. Once that is done run the command that is shown below.
+
+# Before you do `npm start` 
+
+Create a empty directory and run the command `npm create-react-app patient-monitor`. This will install all the necessary dependencies into the project folder directory.
+
+# Install Firebase using npm 
+
+Run the command `npm install firebase` to install the latest version of firebase
+
+# Copy the react app files from the GitHub repository
+
+Clear all the other folders except node_modules. 
+
+Then Copy all the files from this repo into that folder you created and then you can proceed ahead.
+
+# Change firebase.js authentication details
+
+First make an app onto your firebase console to get a code snippet containing all the necessary configuration files.
+
+Copy the snippet values as shown in my firebase.js file
+
+Then go to your authentication section and enable login using email
+
+Run `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -13,6 +47,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+Please install firebase before you start with this.
 
 ### `npm test`
 
