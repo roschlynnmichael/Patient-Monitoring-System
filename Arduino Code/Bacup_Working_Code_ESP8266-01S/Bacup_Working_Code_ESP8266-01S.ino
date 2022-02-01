@@ -2,10 +2,10 @@
 #include <FirebaseArduino.h>
 #include <Arduino.h>
 
-#define FIREBASE_HOST "iot-covid-patient-monitoring-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "mOCIV64cmr0wTfdjJmEfja3ZqhwNUa9tf887aw9J"
-#define WIFI_SSID "SDsouza"
-#define WIFI_PASSWORD "dsouza@8104045917"
+#define FIREBASE_HOST "Your Firebase Database Host"
+#define FIREBASE_AUTH "Your Firebase Authentication Key"
+#define WIFI_SSID "Your Wi-Fi SSID"
+#define WIFI_PASSWORD "Your Wi-Fi Password"
 
 String sensor_data;
 bool Sr;
@@ -26,7 +26,7 @@ void setup() {
   Serial.print("Connected Successfully!!");
   Serial.println(WiFi.localIP());
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-  Firebase.setString("Patient_Details/Patient_Admitted/BedNumber:", id);
+  Firebase.setString("Patient_Details/BED1/BedNumber:", id);
   delay(100);
 }
 
@@ -42,22 +42,19 @@ void loop() {
   int secondcommaindex = sensor_data.indexOf(",", firstcommaindex + 1);
   int thirdcommaindex = sensor_data.indexOf(",", secondcommaindex + 1);
   int fourthcommaindex = sensor_data.indexOf(",", thirdcommaindex + 1);
-  int fifthcommaindex = sensor_data.indexOf(",", fourthcommaindex + 1);
 
   String systolic_pressure = sensor_data.substring(0, firstcommaindex);
   String diastolic_pressure = sensor_data.substring(firstcommaindex + 1, secondcommaindex);
   String pulse_rate = sensor_data.substring(secondcommaindex + 1, thirdcommaindex);
-  String temperature_body = sensor_data.substring(thirdcommaindex + 1, fourthcommaindex);
-  String oxygen_level= sensor_data.substring(fourthcommaindex + 1, fifthcommaindex);
+  String temperature_body = sensor_data.substring(thirdcommaindex + 1);
 
-  Firebase.setString("Patient_Details/Patient_Admitted/SystolicPressure:", systolic_pressure);
+  Firebase.setString("Patient_Details/BED1/SystolicPressure:", systolic_pressure);
   delay(100);
-  Firebase.setString("Patient_Details/Patient_Admitted/DiastolicPressure:", diastolic_pressure);
+  Firebase.setString("Patient_Details/BED1/DiastolicPressure:", diastolic_pressure);
   delay(100);
-  Firebase.setString("Patient_Details/Patient_Admitted/PulseRate:", pulse_rate);
+  Firebase.setString("Patient_Details/BED1/PulseRate:", pulse_rate);
   delay(100);
-  Firebase.setString("Patient_Details/Patient_Admitted/BodyTemperature:", temperature_body);
+  Firebase.setString("Patient_Details/BED1/BodyTemperature:", temperature_body);
   delay(100);
-  Firebase.setString("Patient_Details/Patient_Admitted/BloodOxygenLevel:", oxygen_level);
-  delay(100);
+
 }

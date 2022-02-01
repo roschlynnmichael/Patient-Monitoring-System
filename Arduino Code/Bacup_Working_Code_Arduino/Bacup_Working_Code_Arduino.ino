@@ -1,13 +1,8 @@
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <SoftwareSerial.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include "MAX30100_PulseOximeter.h"
-
-#define REPORTING_PERIOD_MS 1000
-PulseOximeter pox;
-uint32_t tsLastReport = 0;
-float oxy_lvl = 0.00;
 
 unsigned char alert = 0;
 unsigned char system_alert = 0;
@@ -24,7 +19,7 @@ const int buzz=9;
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
-int cel=0;
+float cel=0.00;
 
 String data_pressure;
 char  buff[15];
@@ -47,26 +42,11 @@ void setup()
   myserial.begin(9600);
   lcd.begin();
   lcd.clear();
-  Serial.print("Initializing Oximeter and other sensors");
-  if(!pox.begin())
-  {
-    Serial.println("Oximeter Failed");
-    lcd.print("Oximeter Failed");
-    for(;;);
-  }
-  else
-  {
-    Serial.println("Oximeter Succeeded");
-  }
-  pox.setIRLedCurrent(MAX30100_LED_CURR_7_6MA);
-  pox.setOnBeatDetectedCallback(onBeatDetected);
-  //lcd.begin();
-  //lcd.clear();
   lcd.print(F("        Patient "));
   lcd.setCursor(0, 1);
   lcd.print(F(" Health  Monitor "));
   delay(2000);  
-  send_data_string = String(sys) + ',' + String(dia) + ',' + String(p) + ',' + String(cel) + ',' + String(oxy_lvl);
+  send_data_string = String(sys) + ',' + String(dia) + ',' + String(p) + ',' + String(cel);
   Serial.println("send_data_string = " + String(send_data_string)); 
   send_parameters();  
   delay(4000);  
@@ -95,12 +75,11 @@ void loop()
        lcd.print(dia);
        lcd.setCursor(12, 1);
        lcd.print(p);
-       read_temperature();
-       measureOxi(); 
+       read_temperature(); 
        process();
        alerting();
        delay(500);
-       send_data_string = String(sys) + ',' + String(dia) + ',' + String(p) + ',' + String(cel) + ',' + String(oxy_lvl);
+       send_data_string = String(sys) + ',' + String(dia) + ',' + String(p) + ',' + String(cel);
        Serial.println("send_data_string = " + String(send_data_string)); 
        send_parameters();
        delay(3000);      
@@ -110,7 +89,6 @@ void loop()
    else
    {  
       read_temperature();
-      measureOxi();
       main_display();
    }  
    myserial.listen();
@@ -132,36 +110,16 @@ void read_temperature()
   delay(100);
 }
 
-void onBeatDetected()
-{
-  Serial.println("Heart beat detected!! Oximeter pulse detected!!");
-}
-
-void measureOxi()
-{
-  pox.update();
-  if(millis() - tsLastReport > REPORTING_PERIOD_MS)
-  {
-    oxy_lvl = pox.getSpO2();
-    Serial.print("Oxygen level: ");
-    Serial.print(oxy_lvl);
-    Serial.println("%");
-    tsLastReport = millis();
-  }
-}
-
 void main_display()
 {
     lcd.clear();
-    lcd.print(F("Temp: "));
-    lcd.setCursor(6, 0);
+    lcd.print(F(" Temp : "));
+    lcd.setCursor(8, 0);
     lcd.print(cel);
     lcd.print((char)223);
     lcd.print('C');
     lcd.setCursor(4, 1);
-    lcd.print(F("OxyLvl: "));
-    lcd.setCursor(6 ,1);
-    lcd.print(oxy_lvl);
+    lcd.print(F("PRESS ON   "));
     delay(200);
 }
 
@@ -247,4 +205,3 @@ void alerting()
     delay(3500);
    }
 }
-  
