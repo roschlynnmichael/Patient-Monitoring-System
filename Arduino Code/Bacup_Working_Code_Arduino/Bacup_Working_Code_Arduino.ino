@@ -10,12 +10,12 @@ unsigned char alert_flag=0;
 
 LiquidCrystal_I2C lcd(0x27,16,2);
 SoftwareSerial myserial(13, 12);    // RX, TX for blood pressure sensor
-SoftwareSerial esp8266(3, 2);     // rx,tx for esp8266
+SoftwareSerial esp8266(19, 18);     // rx,tx for esp8266
 
-#define ONE_WIRE_BUS A0
+#define ONE_WIRE_BUS 12
 #define HELP_TONE buzz, 2000, 200
 
-const int buzz=9;
+const int buzz=11;
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
