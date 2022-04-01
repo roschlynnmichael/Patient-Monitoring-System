@@ -8,15 +8,7 @@ Group Number: 11
 
 Developed and Maintained by Roschlynn Michael D'souza and Francina Godwin Pali
 
-This system enables monitoring of the blood pressure and the temperature of the patient. The Arduino UNO Rev3 enables the monitoring of these values and this data is then sent to Firebase Realtime Database using ESP8266-01 Wi-Fi Module. 
+This system enables monitoring of the blood pressure and the temperature of the patient. The Arduino Mega 2560 and NodeMCU ESP8266-12E enables the monitoring of these values and this data is then sent to MySQL DB using the NodeMCU Wi-Fi Module. 
 
-Website made using ReactJS as the Frontend and Firebase as the backend
+Website made using HTML and CSS as our Frontend and JS and PHP as our Backend
 
-Firebase handles all the authentication mechanisms such as Forgot password, update password, login and signup of user and logout. 
-
-# Things yet to be implemented
-
-1. Page Beautification
-2. Fetching of data from firebase
-3. MAX30102 Oximeter Sensor
-4. Setting up alerts on webpage for vitals that are not in the normal range
