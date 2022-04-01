@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor's Login</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7ef9230af3.js" crossorigin="anonymous"></script>
+        <link href="special.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card shadow-2-strong card-registration" style="border-radius: 15px">
+                            <div class="card-body p-5 text-center">
+                                <div class="mb-md-5 mt-md-4 pb-5">
+                                    <form action="doctorlogin.php" method="post" autocomplete="off">
+                                        <h2 class="fw-bold mb-2 text-uppercase">Doctor's Login</h2>
+                                        <p class="text-black mb-5">Please enter your username and password</p>
+                                        <div class="form-outline form-black mb-4">
+                                            <input type="text" id="username" name="username" class="form-control form-control-lg">
+                                            <label class="form-label" for="username">Username</label> 
+                                        </div>
+                                        <div class="form-outline form-black mb-4">
+                                            <input type="password" id="password" name="password" class="form-control form-control-lg">
+                                            <label class="form-label" for="password">Password</label> 
+                                        </div>
+                                        <p class="small mb-5 pb-lg-2">Please contact your administrator to reset your password</p>
+                                        <button class="btn btn-outline-dark btn-lg px-5" type="submit" value="Login">Login</button>
+                                    </form>
+                                    <p></p>
+                                    <div>
+                                        <p class="mb-0">Don't have an account? <a href="register.html" class="text-black fw-bold">Sign Up here!</a></p>
+                                    </div>
+                                    <p></p>
+                                    <div>
+                                        <p class="mb-0">Are you an admin? <a href="adminlogin.html" class="text-black fw-bold">Click here!</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

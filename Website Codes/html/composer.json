@@ -1,0 +1,10 @@
+{
+    "require": {
+        "google/apiclient": "^2.0",
+        "symfony/mailer": "^5.4",
+        "symfony/google-mailer": "^5.4",
+        "hybridauth/hybridauth": "^3.7",
+        "phpmailer/phpmailer": "^6.6",
+        "setasign/fpdf": "^1.8"
+    }
+}
