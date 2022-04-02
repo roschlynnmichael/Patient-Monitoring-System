@@ -16,12 +16,12 @@ $mail->SMTPAuth   = TRUE;
 $mail->SMTPSecure = "tls";
 $mail->Port       = 587;
 $mail->Host       = "smtp.gmail.com";
-$mail->Username   = "projectdbit53@gmail.com";
-$mail->Password   = "D'souza@5451";
+$mail->Username   = "email@gmail.com";
+$mail->Password   = "password";
 
 $mail->IsHTML(true);
-$mail->AddAddress("savarino.dsouza@gmail.com", "recipient-name");
-$mail->SetFrom("projectdbit53@gmail.com", "no-reply");
+$mail->AddAddress("send_to_email", "recipient-name");
+$mail->SetFrom("send_from_email", "no-reply");
 //$mail->AddReplyTo("reply-to-email@domain", "reply-to-name");
 //$mail->AddCC("cc-recipient-email@domain", "cc-recipient-name");
 $mail->Subject = "Test is Test Email sent via Gmail SMTP Server using PHP Mailer";
