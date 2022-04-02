@@ -102,10 +102,10 @@ $_SESSION['generate_id'] = "$generated_id";
                                     <select name="machine_available" id="machine_available" class="select form-control-lg">
                                         <option value="">Choose Available Machines</option>
                                         <?php 
-                                            $DATABASE_HOST='localhost';
-                                            $DATABASE_USER='admin';
-                                            $DATABASE_PASS='dsouza';
-                                            $DATABASE_NAME='patient_monitoring';
+                                            $DATABASE_HOST='server_ip_or_localhost';
+                                            $DATABASE_USER='username';
+                                            $DATABASE_PASS='password';
+                                            $DATABASE_NAME='db_name';
                                             
                                             $con = mysqli_connect($DATABASE_HOST , $DATABASE_USER , $DATABASE_PASS , $DATABASE_NAME);
                                             
@@ -170,10 +170,10 @@ $_SESSION['generate_id'] = "$generated_id";
                                     <th>Bed Number</th>
                                 </tr>
                                 <?php 
-                                    $DATABASE_HOST='localhost';
-                                    $DATABASE_USER='admin';
-                                    $DATABASE_PASS='dsouza';
-                                    $DATABASE_NAME='patient_monitoring';
+                                    $DATABASE_HOST='server_ip_or_localhost';
+                                    $DATABASE_USER='username';
+                                    $DATABASE_PASS='password';
+                                    $DATABASE_NAME='db_name';
                                     
                                     $con = mysqli_connect($DATABASE_HOST , $DATABASE_USER , $DATABASE_PASS , $DATABASE_NAME);
                                     
