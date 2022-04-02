@@ -11,12 +11,12 @@ if (!isset($_SESSION['loggedin']))
 $patient_id = $_SESSION['generate_id'];
 $machineid = $_POST['machine_available'];
 
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'admin';
-$DATABASE_PASS = 'dsouza';
-$DATABASE_NAME = 'patient_monitoring';
+$DATABASE_HOST = 'server_ip_or_localhost';
+$DATABASE_USER = 'username';
+$DATABASE_PASS = 'password';
+$DATABASE_NAME = 'db_name';
 
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+//mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $con = mysqli_connect($DATABASE_HOST , $DATABASE_USER , $DATABASE_PASS , $DATABASE_NAME);
 
 if (mysqli_connect_error())
