@@ -1,7 +1,7 @@
 <?php
 
     $servername="server_ip_here_or_localhost_for_local_mysqldb";
-    $dbname="patient_monitoring";
+    $dbname="db_name";
     $username="your_database_username";
     $password="your_database_user_password";
 
