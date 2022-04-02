@@ -1,13 +1,7 @@
 # Iot Based Patient Monitoring System 🏥
 
-Final Year Project of Group no 11 from Don Bosco Institute of Technology, Kurla(W), Mumbai-400070
+We are Roschlynn and Francina, the developers of this repository. We have designed an IoT Based Remote Monitoring Solution that records patient vitals like heart rate, blood pressure and oxygen saturation of the blood of a patient and records this data into the database.
 
-Department of Information Technology
+We are Group 11 from Don Bosco Institute of Technology, Kurla(W), Mumbai-400070 and we thus present our final year project to you that has taken a full year to design, process, prototype and develop.
 
-Developed and Maintained by Roschlynn Michael D'souza and Francina Godwin Pali
-
-This system enables monitoring of the blood pressure and the temperature of the patient. The Arduino Mega 2560 and NodeMCU ESP8266-12E enables the monitoring of these values and this data is then sent to MySQL DB using the NodeMCU Wi-Fi Module. 
-
-Website made using HTML and CSS as our Frontend and JS and PHP as our Backend
-
-On this repository you will find all the codes and the circuit diagram to start working immediately.
+We faced a lot of challenges along the way that to a lot of learning and with a lot of errors due to poor documentation and library issues for Arduino and NodeMCU. But, we have been able to come through and design this entire project.
