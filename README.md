@@ -1,10 +1,8 @@
-# Patient-Monitoring-System
+# Iot Based Patient Monitoring System 🏥
 
-Final Year Project Don Bosco Institute of Technology, Kurla(W), Mumbai-400070
+Final Year Project of Group no 11 from Don Bosco Institute of Technology, Kurla(W), Mumbai-400070
 
 Department of Information Technology
-
-Group Number: 11
 
 Developed and Maintained by Roschlynn Michael D'souza and Francina Godwin Pali
 
@@ -12,3 +10,4 @@ This system enables monitoring of the blood pressure and the temperature of the 
 
 Website made using HTML and CSS as our Frontend and JS and PHP as our Backend
 
+On this repository you will find all the codes and the circuit diagram to start working immediately.
