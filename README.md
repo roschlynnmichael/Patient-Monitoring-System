@@ -10,5 +10,16 @@ We faced a lot of challenges along the way that to a lot of learning and with a 
 
 1. Clone the Repository
 ```
-
+git clone https://github.com/roschlynnmichael/Patient-Monitoring-System.git
 ```
+
+2. Prepare your webserver
+  * In case your using Raspberry Pi as your web server, begin by installing LAMP Stack on it.
+  * In case your using any other hardware as your web server, you can install LAMP Stack as well on it.
+  > Be Sure to assign a Static IP Address to your Web Server.
+
+3. Setup your Arduino and NodeMCU
+  * Obtain libraries for DS18B20 OneWire Thermal Probe and MAX30100 Pulse Oximeter Sensor.
+  * Burn the codes for the Arduino Mega 2560 and NodeMCU. 
+
+4. Setup Database using the SQL Dump File
