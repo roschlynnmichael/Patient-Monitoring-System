@@ -10,9 +10,9 @@
 MAX30100 maxim;
 PulseOximeter pox;
 
-const char* ssid = "SDsouza";
-const char* password = "dsouza@8104045917";
-const char* serverName = "http://10.0.0.13/post-sensor-data.php";
+const char* ssid = "Your Wi-Fi SSID";
+const char* password = "Your Wi-Fi Password";
+const char* serverName = "http://your_server_ip/post-sensor-data.php";
 
 String systolic_pressure;
 String diastolic_pressure;
