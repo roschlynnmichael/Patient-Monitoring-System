@@ -1,4 +1,4 @@
-#Web Server Codes here
+# Web Server Codes here
 
 The ```post-sensor-data.php``` file will be dumped onto you Apache2 or NGINX server working directory. 
 
