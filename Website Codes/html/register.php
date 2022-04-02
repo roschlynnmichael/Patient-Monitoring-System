@@ -7,10 +7,10 @@ require '/var/www/html/mailer/src/Exception.php';
 require '/var/www/html/mailer/src/PHPMailer.php';
 require '/var/www/html/mailer/src/SMTP.php';
 
-$DATABASE_HOST='localhost';
-$DATABASE_USER='admin';
-$DATABASE_PASS='dsouza';
-$DATABASE_NAME='patient_monitoring';
+$DATABASE_HOST='server_ip_or_localhost';
+$DATABASE_USER='username';
+$DATABASE_PASS='password';
+$DATABASE_NAME='db_name';
 
 $con = mysqli_connect($DATABASE_HOST , $DATABASE_USER , $DATABASE_PASS , $DATABASE_NAME);
 
@@ -139,14 +139,14 @@ function emailsend($role , $activatecode)
     $mail->SMTPSecure = "tls";
     $mail->Port       = 587;
     $mail->Host       = "smtp.gmail.com";
-    $mail->Username   = "projectdbit53@gmail.com";
-    $mail->Password   = "D'souza@5451";
+    $mail->Username   = "email@gmail.com";
+    $mail->Password   = "email_password";
 
-    $activate_link = 'http://10.0.0.13/patient-monitoring/activate.php?email=' . $_POST['email'] . '&code=' . $activatecode . '&role=' . $role;
+    $activate_link = 'http://server_ip_here/patient-monitoring/activate.php?email=' . $_POST['email'] . '&code=' . $activatecode . '&role=' . $role;
 
     $mail->IsHTML(true);
     $mail->AddAddress( $_POST['email'] , $_POST['username']);
-    $mail->SetFrom("projectdbit53@gmail.com", "no-reply");
+    $mail->SetFrom("sent_from_email", "sent_by_name");
     $mail->Subject = "Activation Required for account: " . $_POST['username'];
     $content = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 
