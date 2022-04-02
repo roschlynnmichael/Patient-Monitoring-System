@@ -7,10 +7,10 @@ if(!isset($_SESSION['loggedin']))
     header('Refresh:5 ; URL=adminlogin.html');
 }
 
-$DATABASE_HOST='localhost';
-$DATABASE_USER='admin';
-$DATABASE_PASS='dsouza';
-$DATABASE_NAME='patient_monitoring';
+$DATABASE_HOST='server_ip_or_localhost';
+$DATABASE_USER='username';
+$DATABASE_PASS='password';
+$DATABASE_NAME='db_name';
 
 $con = mysqli_connect($DATABASE_HOST , $DATABASE_USER , $DATABASE_PASS , $DATABASE_NAME);
 
