@@ -6,6 +6,13 @@ We are Group 11 from Don Bosco Institute of Technology, Kurla(W), Mumbai-400070 
 
 We faced a lot of challenges along the way that to a lot of learning and with a lot of errors due to poor documentation and library issues for Arduino and NodeMCU. But, we have been able to come through and design this entire project.
 
+# Folder Details
+
+* Arduino Folder contains code for Arduino Mega 2560
+* NodeMCU Folder contains code for NodeMCU ESP8266-12E (V1.0)
+* SQL Dump Folder contains the SQL Dump file for PHPMyAdmin
+* Website Folder contains the entire website code as well as the HTTP Post Script that will be run
+
 # To get started quickly with this project ✨
 
 1. Clone the Repository
