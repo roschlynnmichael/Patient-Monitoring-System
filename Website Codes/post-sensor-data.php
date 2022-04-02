@@ -1,9 +1,9 @@
 <?php
 
-    $servername="localhost";
+    $servername="server_ip_here_or_localhost_for_local_mysqldb";
     $dbname="patient_monitoring";
-    $username="admin";
-    $password="dsouza";
+    $username="your_database_username";
+    $password="your_database_user_password";
 
     $patient_id = "";
     $machine_identifier = "";
