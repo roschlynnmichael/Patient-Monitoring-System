@@ -15,7 +15,7 @@ We faced a lot of challenges along the way that to a lot of learning and with a 
 
 # To get started quickly with this project ✨
 
-1. Clone the Repository
+1. Clone the Repository using git
 ```
 git clone https://github.com/roschlynnmichael/Patient-Monitoring-System.git
 ```
